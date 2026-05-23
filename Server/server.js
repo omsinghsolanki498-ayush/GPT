@@ -3,15 +3,10 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const mongoose = require("mongoose");
+const connectDB = require("./config/db");
+connectDB();
 
 const app = express();
-
-
-// DATABASE CONNECTION
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB Connected"))
-.catch((err) => console.log(err));
 
 
 // CORS
