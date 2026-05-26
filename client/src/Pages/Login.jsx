@@ -12,8 +12,6 @@ function Login() {
     password: "",
   });
 
-
-
   const handleChange = (e) => {
 
     setFormData({
@@ -41,7 +39,7 @@ function Login() {
        
       toast.success(res.data.message);
 
-      navigate("/Dashboard");
+      navigate("/dashboard");
 
     } catch (error) {
 
